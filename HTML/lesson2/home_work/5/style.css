@@ -1,0 +1,43 @@
+body {
+    background: #08bcd4;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.fa-solid, .fa-brands {
+    box-sizing: border-box;
+    font-size: 40px;
+    color: #656565;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+}
+
+.card {
+    width: 400px;
+    height: 120px;
+    border-radius: 5px;
+    background: #ffffff;
+    margin: 10px 5px 0 5px;
+}
+
+h2 {
+    color: #ff9b53;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #656565;
+    font-size: 13px;
+    padding-right: 10px;
+}

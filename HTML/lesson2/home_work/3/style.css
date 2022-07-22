@@ -1,0 +1,53 @@
+h1{
+    text-align: center;
+}
+
+.block{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    text-align: center;
+    width: 220px;
+    height: 300px;
+    border: 2px solid silver;
+    margin: 5px;
+    background: #fff5c0;
+}
+
+.fa-solid{
+    padding-top: 25px;
+    font-size: 24px;
+    color: #656565;
+}
+
+.card > h2{
+    color: #ff7745;
+}
+
+.card > p{
+    color: #656565;
+}
+
+.btn {
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-decoration: none;
+    color: #fff;
+    background-color: #05cd51;
+    cursor: pointer;
+    user-select: none;
+    transition: box-shadow .18s ease-out,background .18s ease-out,color .18s ease-out;
+}
+
+.btn:hover {
+    box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+}
+.btn:active {
+    background-color: #058c38 !important;
+}

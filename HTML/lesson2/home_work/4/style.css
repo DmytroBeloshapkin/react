@@ -1,0 +1,50 @@
+body {
+    background: #35cd9f;
+    text-align: center;
+    font-family: "Century Gothic";
+    padding-top: 25px;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background: #162029;
+    width: 250px;
+    height: 350px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 5px;
+}
+
+.card > h2 {
+    color: #35cd9f;
+    text-align: center;
+    font-size: 54px;
+    padding-top: 15px;
+    margin: 0;
+}
+
+.card > p {
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.card > h4 {
+    color: #35cd9f;
+    text-align: center;
+    margin: 0;
+}
+
+h1, h4 {
+    font-weight: 100;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}

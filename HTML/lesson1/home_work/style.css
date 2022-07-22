@@ -1,0 +1,41 @@
+body{
+    background: white;
+    padding: 5px;
+}
+
+h1{
+    background: #fec356;
+    color: #3a3a3a;
+    text-align: center;
+    font-size: 44px;
+}
+
+h2{
+    background: #fec356;
+    color: #3a3a3a;
+    text-align: center;
+}
+
+p{
+    background: #eeeeee;
+    color: #3a3a3a;
+    text-align: center;
+}
+
+ul{
+    background: #fff5c0;
+}
+
+.list{
+    color: #fec356;
+    font-style: oblique;
+}
+
+img{
+    height: 190px;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,35 @@
+body{
+    background: #fff5c0;
+}
+
+.wrap{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.card{
+    box-sizing: border-box;
+    height: 300px;
+    width: 250px;
+    border: 1px solid silver;
+    text-align: center;
+    margin: 15px;
+    background: white;
+}
+
+.card > h2{
+    padding-top: 40px;
+}
+
+.card > p {
+    color: #adabab;
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+button{
+    height: 40px;
+    width: 150px;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.19);
+}
