@@ -64,7 +64,7 @@ document.body.append(hr2)
 // - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
 let promtFirstName = prompt(`Як тебе звати`);
 let promtLastName = prompt(`Яке твоє прізвище`);
-let promtAge = prompt(`Скільки тобі років`);
+let promtAge = +prompt(`Скільки тобі років`);
 let img = `<hr><div><img src="img/img.png" alt="old" sizes="10px"><div>`
 
 
