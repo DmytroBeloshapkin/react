@@ -23,16 +23,13 @@ console.log(arrey2)
 
 // - Дан масив [1, 2, 3]. Додайте йому в початок елементи 4, 5, 6.
 let arrey3 = [1, 2, 3];
-for (let i = 6; i >= 4; i--){
+for (let i = 6; i >= 4; i--) {
     arrey3.unshift(i)
 }
 console.log(arrey3);
 
 // - Дан масив ['js', 'css', 'jq']. Виведіть на екран перший елемент за допомогою shift()
 let study = ['js', 'css', 'jq'];
-
-
-
 
 
 // - Дан масив ['js', 'css', 'jq']. Виведіть на екран останній елемент за допомогою pop()
@@ -83,27 +80,111 @@ console.log(num.slice(0, 2));
 //
 // 1. Створити пустий масив та :
 //     a. заповнити його 50 парними числами за допомоги циклу.
+let emptyArrey = []
+for (let i = 0; i < 100; i++) {
+    if (i % 2 === 0) {
+        emptyArrey.push(i)
+    }
+}
+console.log(emptyArrey);
+
 //     b. заповнити його 50 непарними числами за допомоги циклу.
+let emptyArrey1 = []
+for (let i = 0; i < 100; i++) {
+    if (i % 2 === 1) {
+        emptyArrey1.push(i)
+    }
+}
+console.log(emptyArrey1);
+
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
+let emptyArrey2 = []
+for (let i = 0; i < 20; i++) {
+    emptyArrey2[i] = Math.floor(Math.random(0, 20) * 100)
+}
+console.log(emptyArrey2);
+
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
-// 2. Вивести за допомогою console.log кожен третій елемен
-// 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
-// 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+let emptyArrey3 = []
+for (let i = 0; i < 20; i++) {
+    emptyArrey3[i] = Math.floor(Math.random() * (732 - 8)) + 8
+}
+console.log(emptyArrey3);
+
+// // 2. Вивести за допомогою console.log кожен третій елемен
+for (let i = 2; i < emptyArrey3.length; i += 3) {
+    console.log(emptyArrey3[i])
+}
+//
+// // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+//
+for (let i = 2; i < emptyArrey3.length; i += 3) {
+    const emptyArrey3Element = emptyArrey3[i];
+    if (emptyArrey3Element % 2 === 0)
+        console.log(emptyArrey3[i])
+}
+
+// // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+let emptyArrey4 = []
+for (let i = 2; i < emptyArrey3.length; i += 3) {
+    const emptyArrey3Element = emptyArrey3[i];
+    if (emptyArrey3Element % 2 === 0) {
+        emptyArrey4.push(emptyArrey3[i])
+    }
+}
+console.log(emptyArrey4);
+
+
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
+let arrey4 = [1, 2, 3, 5, 7, 9, 56, 8, 67];
+let emptyArrey7 = [];
+for (let i = 0; i < arrey4.length; i++) {
+    const arrey4Element = arrey4[i];
+    if (arrey4Element % 2 === 0) {
+        emptyArrey7.push(arrey4Element)
+    }
+}
+console.log(emptyArrey7)
+
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
-//
+let arreey5 = [100, 250, 50, 168, 120, 345, 188];
+let arreySum = 0
+for (let i = 0; i < arreey5.length; i++) {
+    const arreey5Element = arreey5[i];
+    arreySum = arreySum + arreey5Element
+}
+arreySum = Math.floor(arreySum / arreey5.length)
+console.log(arreySum)
+
+
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+let emptyArrey5 = []
+let emptyArrey6 = []
+
+for (let i = 0; i < 10; i++) {
+    emptyArrey5[i] = Math.floor(Math.random(0, 10) * (20))
+}
+
+console.log(emptyArrey5)
+for (let i = 0; i < 10; i++) {
+    emptyArrey6.push(emptyArrey5[i] * 5)
+}
+console.log(emptyArrey6);
+
+
 // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
-//
-//
-//
-//
-//     ______________________________________________________________________________________________________________________________________________________
-// Додатково
-// ______________________________________________________________________________________________________________________________________________________
-//
-// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
-// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
-// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
-// - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+let numStr = ['a', 'b', 'c', 'd', 1, 2, 3, 4, true, false];
+let numStrNew = []
+for (let i = 0; i < numStr.length; i++) {
+    const numStrElement = numStr[i];
+    if (typeof numStrElement === `number`) {
+        numStrNew.push(numStrElement)
+    }
+}
+console.log(numStr)
+console.log(numStrNew)
+
+
+
+
