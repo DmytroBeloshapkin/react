@@ -97,7 +97,7 @@ for (let i = 0; i < 100; i++) {
 }
 // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
 let step = 0;
-for (let i = 0; i < 100; i ++) {
+for (let i = 0; i < 100; i +=2) {
     console.log(`100 ітерацій з кроком 2 - ${step}`);
     document.write(`100 ітерацій з кроком 2 - ${step}<br>`);
     step+=2;
@@ -158,3 +158,19 @@ for (let i = 0; i <= 23 && hour !== 2 && minute !== 20; i++) {
     }
     minute = 0
 }
+
+// ******************************************************************
+
+for  (let hour = 0; hour <24; hour ++){
+    for (let min = 0; min<60; min++){
+        for (let sec = 0; sec <60;sec++){
+            console.log(`Година: ${hour} Хвилина: ${min} Секунда: ${sec}`);
+            if (hour === 2 && min === 20 && sec === 0){
+                hour =24;
+                min = 60;
+                break
+            }
+        }
+    }
+}
+
