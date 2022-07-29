@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background: #fff5c0;
+    gap: 10px;
+}
+
+h4{
+    margin: 0;
+}
+
+.text{
+    color: red;
+}
+.text1{
+    color: green;
+}
+.text2{
+    color: white;
+}
+
+.red{
+    border: 1px solid #000000;
+    background: #fcb7b7;
+    width: 90%;
+}
+.green{
+    border: 1px solid #000000;
+    background: #56c3b6;
+    width: 90%;
+}
+.blue{
+    border: 1px solid #000000;
+    background: #246abb;
+    width: 90%;
+}
+
+.orange{
+    border: 1px solid #000000;
+    background: #ff9b53;
+    width: 90%;
+}
+
+.day{
+    border: 1px solid red;
+    width: 90%;
+    height: 200px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+
+}
