@@ -1,10 +1,32 @@
 // Всі функції повинні бути описані стрілочним типом!!!!
 let num = [11, 22, 33]
 // - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
-
+let minNum = (a, b, c) => {
+    if (a < b && a < c) {
+        console.log(a)
+    } else if (b < a && b < c) {
+        console.log(b);
+    } else {
+        console.log(c);
+    }
+}
+minNum(1, 5, 10);
+minNum(10, 1, 5);
+minNum(10, 5, 1);
 
 // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-
+let maxNum = (a, b, c) => {
+    if (a > b && a > c) {
+        console.log(a)
+    } else if (b > a && b > c) {
+        console.log(b);
+    } else {
+        console.log(c);
+    }
+}
+maxNum(1, 5, 10);
+maxNum(1, 10, 5);
+maxNum(10, 5, 1);
 
 // - створити функцію яка повертає найбільше число з масиву
 let max = (arr) => {
@@ -41,45 +63,56 @@ let addElement = (arr) => {
 addElement(num)
 
 // - Дано натуральное число n. Выведите все числа от 1 до n.
-// let naturalN = (stop, start = 1) => {
-//     let natural = start
-//     console.log(natural)
-//
-//     if (natural === stop) {
-//         console.log(`END`)
-//         return
-//     }
-//     natural++;
-//     naturalN(stop, natural)
-// }
-// naturalN(8);
+let naturalN = (stop, start = 1) => {
+    let natural = start
+    console.log(natural)
 
-
-
-let naturalN = (stop, start) => {
-    let start = 1
-    console.log(start)
-
-    if (start === stop) {
+    if (natural === stop) {
         console.log(`END`)
         return
     }
-    start++;
-    naturalN(stop, start)
+    natural++;
+    naturalN(stop, natural)
 }
-naturalN(8);
-
-
+naturalN(5);
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
-//
-//
+let ab = (a, b) => {
+    if (a < b) {
+        for (let i = a; i < b; i++) {
+            console.log(i);
+        }
+    } else {
+        for (let i = a; i >= b; i--) {
+            console.log(i);
+        }
+    }
+    console.log(`END`)
+}
+ab(6, 10)
+
 // -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
 //   EXAMPLE:
 //   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-//
+
+let foo = (arr, i) => {
+    if (i !== arr.length && i !== arr.length - 1) {
+        let aa = arr[i];
+        let bb = arr[i + 1];
+
+        arr[i] = bb;
+        arr[i + 1] = aa;
+    }
+    return arr;
+}
+
+console.log(foo([9, 8, 0, 4], 0));
+console.log(foo([9, 8, 0, 4], 1));
+console.log(foo([9, 8, 0, 4], 2));
+
+
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // EXAMPLE:
