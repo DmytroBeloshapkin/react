@@ -68,7 +68,7 @@ let naturalN = (stop, start = 1) => {
     console.log(natural)
 
     if (natural === stop) {
-        console.log(`END`)
+        console.log(`----------END----------`)
         return
     }
     natural++;
@@ -77,7 +77,7 @@ let naturalN = (stop, start = 1) => {
 naturalN(5);
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
-let ab = (a, b) => {
+let iterator = (a, b) => {
     if (a < b) {
         for (let i = a; i < b; i++) {
             console.log(i);
@@ -87,16 +87,12 @@ let ab = (a, b) => {
             console.log(i);
         }
     }
-    console.log(`END`)
+    console.log(`***END***`)
 }
-ab(6, 10)
+iterator(6, 10)
+iterator(10, 6)
 
 // -   функція Приймає масив та число "i", та міняє місцями об`єкт який знаходиться в індексі "i" на "i+1"
-//   EXAMPLE:
-//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
-//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
-//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
-
 let foo = (arr, i) => {
     if (i !== arr.length && i !== arr.length - 1) {
         let aa = arr[i];
@@ -108,14 +104,42 @@ let foo = (arr, i) => {
     return arr;
 }
 
+//   EXAMPLE:
+//   foo([9,8,0,4], 0) // ==> [ 8, 9, 0, 4 ]
+//   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
+//   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
+
 console.log(foo([9, 8, 0, 4], 0));
 console.log(foo([9, 8, 0, 4], 1));
 console.log(foo([9, 8, 0, 4], 2));
 
 
-// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
+// - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву.
+// Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
+let zero = arr => {
+    let counter = 0;
+    let emptyArr = [];
+    let i = 0;
+    for (let arrElement of arr) {
+        if (arrElement === 0) {
+            counter++;
+        } else {
+            emptyArr[i] = arrElement;
+            i++;
+        }
+    }
+    for (let j = 0, k = emptyArr.length; j < counter; j++, k++) {
+        emptyArr[k] = 0;
+    }
+    return arr = emptyArr;
+}
+
 // EXAMPLE:
 // [1,0,6,0,3] => [1,6,3,0,0]
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
+
+console.log(zero([1, 0, 6, 0, 3]));
+console.log(zero([0, 1, 2, 3, 4]));
+console.log(zero([0, 0, 1, 0]));
