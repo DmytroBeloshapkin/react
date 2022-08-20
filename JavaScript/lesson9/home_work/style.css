@@ -1,0 +1,50 @@
+body{
+    background: #fcf1f1;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.member {
+    width: 17%;
+    background: #cfcfcf;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img {
+    height: 250px;
+}
+
+/* 2 */
+.boxCourses{
+margin-top: 15px;
+    background: #dcd8ff;
+    border: 5px solid red;
+}
+
+.cours, .hover, .month, .hour, .modules{
+    margin: 5px;
+    border: 3px solid #02417e;
+    text-align: center;
+}
+.month{
+    width: 33%;
+}
+.hour{
+    width: 66%;
+}
+
+.month_hour{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
