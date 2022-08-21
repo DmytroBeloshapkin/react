@@ -256,6 +256,8 @@ for (const couse of coursesAndDurationArray) {
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
 document.getElementById('hider').onclick = function() {
     document.getElementById('text').hidden = true;
+
+// .addEventListener()
 }
 
 
