@@ -23,7 +23,7 @@ body{
 
 /* 2 */
 .boxCourses{
-margin-top: 15px;
+    margin-top: 15px;
     background: #dcd8ff;
     border: 5px solid red;
 }
@@ -32,7 +32,16 @@ margin-top: 15px;
     margin: 5px;
     border: 3px solid #02417e;
     text-align: center;
+    font-size: 24px;
 }
+.cours{
+    border: 3px solid #8d002c;
+}
+
+.modules{
+    text-align: left;
+}
+
 .month{
     width: 33%;
 }
@@ -46,5 +55,14 @@ margin-top: 15px;
 }
 
 
+/*3*/
+.menu{
+    background: #56c3b6;
+    font-size: 24px;
+}
 
-
+/*4*/
+.item{
+    background: #05cd51;
+    font-size: 14px;
+}
