@@ -167,52 +167,61 @@ for (const coursesArrayElement of coursesArray) {
     hour.classList.add('hour')
     hour.innerText = coursesArrayElement.hourDuration
 
-
     let modules = document.createElement('div')
     modules.classList.add('modules')
 
-        for (const module of coursesArrayElement.modules) {
-            let div = document.createElement('li')
+    for (const module of coursesArrayElement.modules) {
+        let div = document.createElement('li')
 
-            div.innerText = module
-            modules.append(div)
+        div.innerText = module
+        modules.append(div)
     }
 
-
-
     month_hour.append(month, hour)
-
     cours.append(hover, month_hour, modules)
-
     courses.append(cours)
-
-
 }
-
 document.body.append(courses)
-
-
-
-
 
 
 // - Є масив:
 //     ['Main','Products','About us','Contacts']
 // Взяти файл template1.html та додати в нього скріпт котрий для кожного елементу масиву створює li та додає його до блоку .menu
 // Завдання робити через цикли.
-//
+
+let arr = ['Main', 'Products', 'About us', 'Contacts']
+
+let menu = document.getElementsByClassName('menu')[0]
+
+for (const item of arr) {
+    let li = document.createElement('li')
+    li.innerText = item
+    menu.appendChild(li)
+}
+
+
 // - Є масив
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
 // Для кожного елементу масиву зробити блок в якому вивести інформацію про title та monthDuration
 // Завдання робити через цикли.
-//
+
+let couses = document.createElement('div')
+for (const item of coursesAndDurationArray) {
+    let itemBox = document.createElement('div')
+    itemBox.classList.add('item')
+    itemBox.innerText = `title: ${item.title}, monthDuration: ${item.monthDuration}`
+    couses.appendChild(itemBox)
+}
+document.body.append(couses)
+
+
 // - Є масив
 // let coursesAndDurationArray = [
 //     {title: 'JavaScript Complex', monthDuration: 5},
@@ -226,17 +235,70 @@ document.body.append(courses)
 //
 // За допомоги скріпта для кожного елементу масиву зробити <div class='item'> ,  в якому буде <h1 class='heading'>  з title  елементу, та <p class='description'> з monthDuration елементу.
 //     Завдання робити через цикли.
-//
-//
-//
+for (const couse of coursesAndDurationArray) {
+    let div = document.createElement('div')
+    div.classList.add('item')
+
+    let h1 = document.createElement(`h1`)
+    h1.classList.add('heading')
+    h1.innerText = `${couse.title}`
+
+    let p = document.createElement(`p`)
+    p.classList.add('description')
+    p.innerText = `${couse.monthDuration}`
+
+    div.appendChild(h1, p)
+    document.body.appendChild(div)
+}
+
 // -----------
 //
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
-//
-//
-//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18, та повідомити про це користувача
-//
-//
+document.getElementById('hider').onclick = function() {
+    document.getElementById('text').hidden = true;
+}
+
+
+//     - створити інпут який приймає вік людини та кнопку яка підтверджує дію.
+let age = document.getElementById('age')
+let button = document.getElementById('button')
+button.onclick = function (e) {
+    e.preventDefault()
+    console.log(age.value);
+}
+
+//     При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
+//    та повідомити про це користувача
+let age2 = document.getElementById('ageIf')
+let button2 = document.getElementById('buttonIf')
+button2.onclick = function (e) {
+    e.preventDefault()
+    if (age2.value < 18){
+        console.log('access denied')
+    } else {
+        console.log('wellcome')
+    }
+    console.log(age2.value);
+}
+
+
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
+
+let f1 = document.forms.f1
+let a = document.getElementById('a')
+
+let b = document.getElementById('b')
+
+let c = document.getElementById('c')
+
+let butSend = document.getElementById('butSend')
+butSend.onclick = function (e){
+    e.preventDefault()
+    let div = document.createElement('div')
+    div.style.background = black
+    div.style.height = 10
+    div.style.width = 100
+
+}
