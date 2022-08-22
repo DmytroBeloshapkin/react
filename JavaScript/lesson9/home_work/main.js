@@ -254,7 +254,7 @@ for (const couse of coursesAndDurationArray) {
 // -----------
 //
 //     - Створити довільний елемент з id = text.  Використовуючи JavaScript, зробіть так, щоб при натисканні на кнопку зникав елемент з id="text".
-document.getElementById('hider').onclick = function() {
+document.getElementById('hider').onclick = function () {
     document.getElementById('text').hidden = true;
 
 // .addEventListener()
@@ -275,7 +275,7 @@ let age2 = document.getElementById('ageIf')
 let button2 = document.getElementById('buttonIf')
 button2.onclick = function (e) {
     e.preventDefault()
-    if (age2.value < 18){
+    if (age2.value < 18) {
         console.log('access denied')
     } else {
         console.log('wellcome')
@@ -286,21 +286,61 @@ button2.onclick = function (e) {
 
 // *** Створити 3 инпута та кнопку. Один визначає кількість рядків, другий - кількість ячеєк, третій вмиіст ячеєк.
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
-// (Додатковачастина для завдання)
+// (Додаткова частина для завдання)
 
-let f1 = document.forms.f1
-let a = document.getElementById('a')
+// let f1 = document.forms.f1
+// let a = document.getElementById('a')
+//
+// let b = document.getElementById('b')
+//
+// let c = document.getElementById('c')
+//
+// let butSend = document.getElementById('butSend')
+// butSend.onclick = function (e){
+//     e.preventDefault()
+//     let div = document.createElement('div')
+//     div.style.background = black
+//     div.style.height = 10
+//     div.style.width = 100
+//
+// }
 
-let b = document.getElementById('b')
 
-let c = document.getElementById('c')
+let input1 = document.createElement('input')
+input1.setAttribute('placeholder', 'enter1')
 
-let butSend = document.getElementById('butSend')
-butSend.onclick = function (e){
-    e.preventDefault()
-    let div = document.createElement('div')
-    div.style.background = black
-    div.style.height = 10
-    div.style.width = 100
+let input2 = document.createElement('input')
+input2.setAttribute('placeholder', 'enter2')
 
-}
+let input3 = document.createElement('input')
+input3.setAttribute('placeholder', 'enter3')
+
+let button4 = document.createElement('button')
+button.innerText = 'send'
+
+button4.addEventListener('click', function () {
+
+    let row = input1.value
+    let col = input2.value
+    let elem = input3.value
+
+    let generator = (tr, td, text) => {
+
+        let table = document.createElement("table")
+
+        for (let i = 0; i < tr; i++) {
+            let tr = document.createElement(`tr`)
+            generator.appendChild(tr)
+
+            for (let j = 0; j < td; j++) {
+                let td = document.createElement('td')
+                td.innerText = `${text}`
+                tr.appendChild(td)
+            }
+            }
+        }
+        generator(row, col, elem)
+    }
+)
+
+    document.body.append(input1, input2, input3, button4);
