@@ -1,0 +1,110 @@
+db.users.find()
+
+db.users.insertOne({car: 'Mercedes-Benz', age: 10})
+
+db.users.find({gender:'male'})
+
+db.users.find(
+    {gender:'male', rating: 5},
+    {_id:0, age:0}
+    )
+
+db.users.find(
+    {gender:'male', rating: 5},
+    {name:1, _id:0, age: 1}
+    )
+
+db.users.find({_id:ObjectId('631c79a3cb676e20b761f916')})
+
+db.users.find(
+    {$or:[
+            {rating: 2},
+            {rating: 3},
+            {age: 12},
+        ]}
+    )
+
+db.users.find(
+    {age:
+            {$in:[25,12,13]}
+    }
+    )
+
+
+db.users.find(
+    {age:
+            {$nin:[25,12,13]}
+    }
+    )
+
+db.users.find(
+    {
+        age:{
+            $not:{
+                $in:[12]
+            }
+        }
+    }
+    )
+
+db.users.find({name: /^a/i})
+db.users.find({name: /a$/i})
+db.users.find({name: /^.{2}t/i})
+db.users.find({name: /^.*v.*/i})
+db.users.find({name: /^k.*a$/i})
+
+db.users.find().sort({rating:-1, name: 1})
+db.users.find().sort({name: 1})
+
+db.users.find({age:{$lt:15}})
+db.users.find({age:{$lte:15}})
+db.users.find({age:{$gt:15}})
+db.users.find({age:{$gte:15}})
+db.users.find({age:{$ne:15}})
+
+db.users.find({
+    $and:[
+        {age: {$gte:8}},
+        {age: {$lte:20}},
+    ]
+})
+
+// db.users.find('Mercedes-benz')
+db.users.find().limit(1)
+db.users.find().limit(1).skip(1)
+
+db.users.updateOne(
+    {_id:ObjectId('631c79a3cb676e20b761f915')},
+    {$set: {name: 'Dima', age: 37}}
+    )
+
+db.users.updateMany({gender: 'male'}, {$set:{gender: 'animal'}})
+
+db.users.find({parents:{$exists:1}})
+db.users.find({parents: null})
+
+db.users.updateOne({_id:ObjectId('631c7a54cb676e20b761f91f')}, {$set: {parents: null}})
+
+db.users.find({studying: 'java'})
+db.users.find({'studying.1': 'java'})
+
+db.users.deleteOne({_id:ObjectId('631c79a3cb676e20b761f918')})
+
+db.users.find({'address.house': {$gt:20}})
+
+db.users.find({parents: {$size:1}})
+db.users.find({parents: {$size:2}})
+
+db.users.updateMany({parents: {$size:2}}, {$set: {'parents.$[]': 'lalala'}})
+
+db.users.updateOne({_id:ObjectId('631c79a3cb676e20b761f91b')}, {$push: {studying: 'java script'}})
+db.users.updateOne({_id:ObjectId('631c79a3cb676e20b761f91b')}, {$set: {studying: ['java script']}})
+
+db.users.find({_id:ObjectId('631c79a3cb676e20b761f91b')})
+
+
+
+
+
+
+
