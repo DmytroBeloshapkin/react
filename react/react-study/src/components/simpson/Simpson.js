@@ -1,9 +1,11 @@
+import './style.css'
+
 export default function Simpson(props) {
 
-        let {item:user} = props;
+    let {item: user} = props;
 
     return (
-        <div>
+        <div className="userSimpson">
             <h3>{user.name} {user.surname}</h3>
             <p>age: {user.age}</p>
             <p>{user.info}</p>

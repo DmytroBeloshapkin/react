@@ -1,11 +1,12 @@
-export default function Morty(props){
+import './style.css'
 
-    let {item:user} = this.props;
+export default function User(props) {
 
-    return(
-        <div>
-            <h3>{user.id}</h3>
-            <h3>{user.name}</h3>
+    let {item: user} = props;
+
+    return (
+        <div className="userMorty">
+            <h3>{user.id}. {user.name}</h3>
             <p>{user.status}</p>
             <p>{user.species}</p>
             <p>{user.gender}</p>

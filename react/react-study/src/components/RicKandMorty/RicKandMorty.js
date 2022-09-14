@@ -1,4 +1,6 @@
-import Morty from "./User";
+import User from "./User"
+import {useState} from "react"
+
 
 export default function Morty() {
 
@@ -7,13 +9,13 @@ export default function Morty() {
     fetch('https://rickandmortyapi.com/api/character')
         .then((value) => value.json())
         .then(value => {
-                setUsers(value)
+                setUsers(value.results)
             }
         );
 
     return (
-        <div>
-            {users.map(user => (<User item = {user} key = {user.id}/>))}
+        <div className="container2">
+            {users.map(user => (<User item={user} key={user.id}/>))}
         </div>
     )
 }
